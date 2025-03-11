@@ -47,7 +47,7 @@ These commands will run the respective virtual machines for either **RISC-V** or
 (The command is referenced from the original repository.)
 The specific testcase to test can be specified through `apps/oscomp/testcase_list`. It depends on which test cases you want to test. It can easily help you debug.
 
-#### Standard test case
+#### Standard test
 
 **Attention!**
 If you have previously run `make all`, please run `make clean` first to ensure a clean configuration.
