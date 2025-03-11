@@ -9,6 +9,11 @@ SRC_DIR="sdcard/$platform"
 IMG="sdcard-$platform.img"
 dd if=/dev/zero of=$IMG count=128 bs=1M
 mkfs.ext4 $IMG
+if command -v e2tools > /dev/null 2>&1; then
+    echo "e2tools is installed."
+else
+    apt install e2tools
+fi
 
 find "$SRC_DIR" -type f | while read -r src_file; do
     # 计算相对路径（兼容绝对路径格式）
